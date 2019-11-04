@@ -11,10 +11,10 @@ public class HomePage extends PageObject {
     @FindBy(id = "gh-btn") private WebElement submitSearch;
     public HomePage(WebDriver driver) {
         super(driver);
-    }
+    }// father has params constructor so this is oblig
 
     public void searchForSomething(String item){
-        searchBar.sendKeys("shoes for men");
+        searchBar.sendKeys(item);
     }
 
     public void setSubmitSearch(){

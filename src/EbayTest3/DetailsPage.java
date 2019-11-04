@@ -9,18 +9,23 @@ import org.openqa.selenium.support.ui.Select;
 public class DetailsPage extends PageObject {
 
 
-    @FindBy(id = "msku-sel-1") private Select selectSize;
+    private Select select_active ;
+    @FindBy(id = "msku-sel-1") private WebElement selectSize;
     @FindBy(id = "isCartBtn_btn") private WebElement addToCartButton;
 
 
     public DetailsPage(WebDriver driver) {
         super(driver);
+        this.select_active = new Select(selectSize);
     }
 
-    public void chooseSize(int index){
-        selectSize.selectByIndex(index);
+    public void chooseSize(Integer index){
+
+        select_active.selectByValue(index.toString());
+
 
     }
+
 
 
     public void addToCart(){
