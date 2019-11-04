@@ -1,0 +1,2 @@
+public class EbayTest3 {
+}
